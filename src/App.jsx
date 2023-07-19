@@ -1,7 +1,16 @@
+import { useState } from "react";
+import { nanoid } from "nanoid";
+
 function App() {
 
-  const varTest = 10;
-  console.log(varTest);
+  const [todoList, setTodoList] = useState([
+    {
+      id: nanoid(10),
+      content: "Item 1"
+    }
+  ]);
+  console.log(todoList);
+
   return (
     <div className="h-screen bg-slate-900">
       <div className="max-w-4xl mx-auto pt-20 px-6">
